@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="container">
         <h2><span>Mi first time using</span><br>AnimeJs</h2>
     </div>
 </body>
+<script src="./js/anime.min.js"></script>
+<script src="./js/style.js"></script>
+<script>
+        function animateBlocks() {
+        anime({
+            targets: '.block',
+            translateX: function() {
+                return anime.random(-700, 700)
+            },
+            translateY: function() {
+                return anime.random(-500, 500)
+            },
+            scale: function() {
+                return anime.random(1, 5)
+            },
+            easing: 'linear',
+            duration: 3000,
+            delay: anime.stagger(10),
+            complete: animateBlocks
+        })
+    }
+    animateBlocks();
+</script>
 </html>
