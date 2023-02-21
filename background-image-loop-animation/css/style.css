@@ -21,6 +21,7 @@ section h2 {
     font-size: 10vw;
     color: #fff;
     font-weight: 700;
+    z-index: 1000;
 }
 
 .banner {
